@@ -2,7 +2,8 @@ package me.strangepan.website.prefabs
 
 import kotlinx.html.*
 
-inline fun FlowContent.socialNav() {
+@HtmlTagMarker
+fun FlowContent.socialNav() {
   nav(classes = "social") {
     ul {
       li {
