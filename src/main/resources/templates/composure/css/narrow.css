@@ -1,0 +1,101 @@
+@media all and (max-width: 700px) {
+
+
+
+/* Basic page layout rules */
+#page {
+	padding-right: 24px;
+	padding-left: 24px;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+
+/* Header elements rules */
+#header .title {
+	margin: 0 0 0.5em 0;
+	text-align: center;
+}
+
+#content {
+	margin-top: 2em;
+}
+
+/* Home welcome message */
+.front-and-center {
+	margin-top: 2em;
+	margin-bottom: 4em;
+}
+
+/* Footer elements rules */
+#footer nav.social {
+	float: right;
+	margin-left: 1em;
+}
+#footer nav.simple {
+	text-align: center;
+}
+
+
+/******************************* Content Styles *******************************/
+
+
+/* Project list */
+.project-list {
+	margin-top: 2em;
+}
+.project-list li {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 565px;
+}
+
+.document h1 {
+	padding-bottom: 0em;
+	border-bottom: none;
+	margin-bottom: 0.5em;
+}
+
+
+
+/****************************** Navigation Styles *****************************/
+
+
+
+/* Main nav rules */
+nav.main ul {
+	overflow: hidden;
+	max-width: 36em;
+	margin: 0 auto;
+}
+nav.main li {
+	display: block;
+	float: left;
+	margin-bottom: 0.75em;
+	width: 50%;
+}
+
+
+
+/* Social nav rules */
+nav.social li {
+	text-align: right;
+	margin-bottom: 0.5em;
+}
+nav.social .icon {
+	float: right;
+	margin: 0.22em 0 0 0.4em;
+	vertical-align: text-bottom;
+}
+
+
+
+/******************************** Special Cases *******************************/
+
+.front-and-center.error h1 {
+	font-size: 3em;
+}
+
+
+
+}

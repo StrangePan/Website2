@@ -9,11 +9,11 @@ plugins {
   id("org.jetbrains.kotlin.plugin.serialization") version "2.0.10"
 }
 
-group = "com.example"
+group = "me.strangepan.website"
 version = "0.0.1"
 
 application {
-  mainClass.set("com.example.ApplicationKt")
+  mainClass.set("me.strangepan.website.ApplicationKt")
 
   val isDevelopment: Boolean = project.ext.has("development")
   applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
@@ -30,6 +30,7 @@ dependencies {
   implementation("io.ktor:ktor-server-html-builder-jvm")
   implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:$kotlinx_html_version")
   implementation("org.jetbrains:kotlin-css-jvm:1.0.0-pre.129-kotlin-1.4.20")
+  implementation("org.jetbrains:markdown:0.7.3")
   implementation("io.ktor:ktor-server-netty-jvm")
   implementation("ch.qos.logback:logback-classic:$logback_version")
   testImplementation("io.ktor:ktor-server-test-host-jvm")

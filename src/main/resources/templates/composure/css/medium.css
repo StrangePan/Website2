@@ -1,0 +1,143 @@
+@media all and (min-width: 701px) and (max-width: 1000px) {
+
+
+
+/* Footer elements rules */
+#footer nav.social {
+	float: right;
+	margin-left: 1em;
+}
+
+
+
+/******************************* Layout Styles ********************************/
+
+
+#page {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+#header {
+	overflow: hidden;
+}
+#header:before {
+	content: " ";
+	display: block;
+	float: right;
+	transition: height 300ms ease-out;
+	height: 3.1em;
+}
+#header .title {
+	margin-bottom: 0.2em;
+	float: left;
+}
+#content {
+	padding-top: 3em;
+}
+.front-and-center {
+	margin-top: 2.5em;
+	margin-bottom: 5.5em;
+}
+
+
+
+/******************************* Content Styles *******************************/
+
+
+
+article p {
+	text-align: justify;
+}
+
+/* Columnar elements and widgets */
+.columnar {
+	/* For browsers that don't support even and odd. */
+	float: left;
+	width: 44%;
+	padding: 0 3%;
+}
+.columnar:nth-child(odd) {
+	float: left;
+	width: 47.5%;
+	width: calc(50% - 1.5em);
+	padding: 0;
+}
+.columnar:nth-child(even) {
+	float: right;
+	width: 47.5%;
+	width: calc(50% - 1.5em);
+	padding: 0;
+}
+.columnar p {
+	text-align: left;
+}
+
+/* Project list */
+.project-list {
+	margin-top: 2em;
+}
+.project-list li {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 565px;
+}
+
+
+
+/****************************** Navigation Styles *****************************/
+
+
+
+/* Main nav rules */
+nav.main {
+	float: right;
+	clear: right;
+}
+nav.main ul {
+	font-size: 0;
+	text-align: right;
+}
+nav.main li {
+	display: inline-block;
+	padding: 0.3em 0 0.3em 3em;
+	min-width: 5em;
+}
+
+/* Fanceh animation stuff */
+nav.main a {
+	position: relative;
+}
+nav.main a:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	bottom: -0.3em;
+	left: 0px;
+	right: 0px;
+	height: 0px;
+
+	background-color: #555555;
+	transition: height 150ms ease-out,
+				background-color 300ms ease;
+}
+nav.main a:hover:before {
+	height: 4px;
+	background-color: #000000;
+}
+
+
+
+/* Social nav rules */
+nav.social li {
+	text-align: right;
+	margin-bottom: 0.5em;
+}
+nav.social .icon {
+	float: right;
+	margin: 0.22em 0 0 0.4em;
+	vertical-align: text-bottom;
+}
+
+
+
+}

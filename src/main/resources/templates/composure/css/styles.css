@@ -1,0 +1,487 @@
+/* Override defaults for html and body tags */
+html, body {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* Define the typeface for the page */
+html {
+	font-size: 62.5%
+}
+body {
+	font-size: 1.4rem;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	color: #555555;
+	background-color: #FAFAFA;
+}
+h1 {
+	font-size: 1.5em;
+}
+h2 {
+	font-size: 1.25em;
+}
+
+/* Some link customizations */
+a, a:visited {
+	color: #555555;
+	text-decoration: underline;
+}
+a:hover, a:focus, a:active {
+	color: #000000;
+}
+a:hover, a:active {
+	text-decoration: none;
+}
+a i.fa-external-link {
+	margin-left: 0.5em;
+	font-size: 0.75em;
+}
+
+
+
+/* Basic page layout rules */
+#page, #header, #content, #footer {
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+#page {
+	margin: 0 auto;
+	max-width: 1200px;
+	transition: padding 300ms linear;
+}
+#header {
+	padding-top: 0.5em;
+	min-height: 75px;
+}
+#content {
+	min-height: 300px;
+}
+#footer {
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	min-height: 50px;
+}
+
+
+
+/* Basic page design rules */
+#header {
+	box-shadow: 0px 16px 32px -30px rgba(0, 0, 0, 0.375);
+}
+#content {
+	overflow: hidden;
+}
+#footer {
+	overflow: hidden;
+	font-size: 1.4rem;
+	border-top: 1px solid #AAAAAA;
+}
+#footer .copyright {
+	margin-bottom: 1em;
+}
+hr {
+	display: block;
+	margin: 1em 0;
+	height: 1px;
+	border: none;
+	background: #AAAAAA;
+}
+
+
+/* Header elements rules */
+#header .title {
+	display: block;
+	margin: 0;
+	padding: 0;
+
+	font-size: 2.4em;
+	font-weight: 600;
+	font-style: italic;
+	color: #333333;
+}
+#header .title a {
+	text-decoration: none;
+}
+#header .profile-picture {
+	height: 2em;
+	margin: 0 0.25em -0.54em 0;
+	border-radius: 100%;
+	box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer elements rules */
+#footer nav.social {
+	font-size: 1.5em;
+}
+
+
+
+/******************************* Content Styles *******************************/
+
+
+
+/* Article styles */
+article {
+	font-size: 1.4rem;
+}
+article p, article p a, article p a:visited {
+	color: #000000;
+}
+article p {
+    font-size: 1.6rem;
+	line-height: 1.6em;
+}
+
+article h1, article h2, article h3 {
+  clear: both;
+}
+article h1 {
+	margin-top: 3em;
+}
+article h2 {
+	font-size: 1em;
+	margin-top: 3em;
+}
+
+article figure {
+	display: block;
+	margin: 1em 0;
+}
+article figure.left {
+	float: left;
+	margin: 0.5em 0.5em 0.5em 0;
+}
+article figure.right {
+	float: right;
+	margin: 0.5em 0 0.5em 0.5em;
+}
+
+article img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+article img.right, article img.left {
+    display: block;
+    max-width: 35%;
+    margin: 1em;
+}
+article img.right {
+    float: right;
+    margin-right: 0em;
+}
+article img.left {
+    float: left;
+    margin-left: 0em;
+}
+article img.top {
+    margin-top: 0em;
+}
+article img.bottom {
+    margin-bottom: 0em;
+}
+
+article footer {
+	margin-top: 2em;
+	text-align: right;
+	font-size: 0.85em;
+}
+
+/* Document styles */
+.document {
+	display: block;
+	margin: 2em auto;
+	max-width: 60em;
+}
+.document h1 {
+	margin-top: 2em;
+	text-transform: uppercase;
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid #AAAAAA;
+}
+.document .subtitle {
+	text-transform: uppercase;
+	font-weight: normal;
+	padding-left: 0.5em;
+}
+.document li {
+	line-height: 1.75em;
+}
+.document strong {
+	color: #888;
+}
+
+/* Info boxes */
+.info {
+	display: block;
+	margin: 0 auto 20px;
+	padding: 0;
+}
+
+
+.button-row {
+	display: block;
+	margin: 0;
+	text-align: center;
+}
+
+/* Front-and-center box */
+.front-and-center {
+	display: block;
+	margin: 10em auto;
+	max-width: 50em;
+	text-align: center;
+	transition: margin 300ms linear;
+}
+.front-and-center h1 {
+	margin: 0;
+	font-size: 4em;
+	font-weight: 700;
+	text-align: center;
+}
+.front-and-center p {
+	text-align: center;
+	font-size: 1.4em;
+}
+
+/* Home welcome message */
+.welcome h1 {
+	font-family: "Tangerine", cursive;
+	font-size: 6em;
+	font-weight: 700;
+}
+
+/* Fanceh animation stuff */
+.welcome header,
+.welcome section {
+	position: relative;
+
+	-webkit-animation: float-in 1s ease-out 1s;
+	animation: float-in 1s ease-out 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.welcome section {
+	-webkit-animation-delay: 1500ms;
+	animation-delay: 1500ms;
+}
+
+/* Project list */
+.project-list {
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+.project-list li {
+	display: block;
+	position: relative;
+	padding: 0;
+	margin: 0 0 2em;
+}
+.project-list li .thumbnail {
+	display: block;
+	width: 100%;
+	box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+.project-list li h2 {
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 4px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	font-size: 26px;
+	font-weight: bold;
+	color: #EFEFEF;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+}
+
+/* Miscellaneous */
+.timestamp {
+	font-weight: bold;
+}
+
+
+
+/********************************* Animations *********************************/
+
+
+
+/* float-in animation */
+@-webkit-keyframes float-in {
+	from {
+		top: 20px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+@keyframes float-in {
+	from {
+		top: 20px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+
+
+/****************************** Navigation Styles *****************************/
+
+
+
+/* Main nav rules */
+nav.main {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+nav.main ul {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav.main li {
+	margin: 0;
+	padding: 0;
+
+	text-align: center;
+}
+nav.main li,
+nav.main a {
+	/* Combine these two for non-link menu items */
+
+	font-size: 1.6rem;
+	font-weight: 600;
+	text-decoration: none;
+	color: #555555;
+}
+nav.main a {
+	transition: color 300ms ease;
+}
+nav.main a:hover,
+nav.main a:active,
+nav.main a:focus {
+	color: #000000;
+}
+
+
+
+/* Social nav rules */
+nav.social {
+	display: block;
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+}
+nav.social ul {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav.social li {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+nav.social a {
+	color: inherit;
+	text-decoration: none;
+}
+nav.social a:hover,
+nav.social a:active,
+nav.social a:focus {
+	color: #000000;
+}
+nav.social .icon {
+	display: inline-block;
+	margin-right: 0.4em;
+	height: 1em;
+	width: 1.2em;
+	text-align: center;
+}
+
+
+
+/* Simple nav rules */
+nav.simple {
+	display: block;
+	margin: 0.5em 0;
+	padding: 0;
+	font-size: 1em;
+}
+nav.simple ul {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav.simple li {
+	display: inline;
+}
+nav.simple a {
+	color: inherit;
+	text-decoration: underline;
+}
+nav.simple a:hover,
+nav.simple a:active {
+	text-decoration: none;
+}
+nav.simple li:before {
+	content: "|";
+	display: inline-block;
+	margin: 0 0.5em;
+}
+nav.simple li:first-of-type:before {
+	display: none;
+}
+
+
+/******************************** Special Cases *******************************/
+
+
+#welcome-image {
+  background-color: none;
+  background-image: none;
+  box-shadow: none;
+}
+
+.front-and-center.error h1 {
+	font-size: 4em;
+}
+
+a.download.independent {
+	display: inline-block;
+	background: rgb(118,60,255);
+	padding: 1em 2em 1.15em;
+	margin: 1.5em auto;
+	border-radius: 3px;
+	box-shadow: 0 -0.35em 0 0 rgba(0,0,0,0.35) inset;
+	font-weight: bold;
+	color: #F6F6F6;
+	text-decoration: none;
+	text-shadow: 0 1px 0px rgba(0,0,0,0.5);
+	text-align: center;
+}
+a.download.independent:hover {
+	background: rgb(152,108,255);
+}
+a.download.independent:active {
+	padding: 1.35em 2em 0.8em;
+	box-shadow: 0 0.35em 0 0 rgba(0,0,0,0.35) inset;
+}
