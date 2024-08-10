@@ -4,7 +4,6 @@ import kotlinx.html.*
 import me.strangepan.website.prefabs.mainNav
 import me.strangepan.website.prefabs.socialNav
 
-@HtmlTagMarker
 inline fun HTML.composure(title: String? = null, crossinline content: FlowContent.() -> Unit = {}) {
   head {
     comment("Meta information")
