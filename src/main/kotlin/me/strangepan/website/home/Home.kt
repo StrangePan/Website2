@@ -7,7 +7,7 @@ import org.intellij.markdown.flavours.commonmark.CommonMarkFlavourDescriptor
 import org.intellij.markdown.html.HtmlGenerator
 import org.intellij.markdown.parser.MarkdownParser
 
-val HOME_PAGE: HTML.() -> Unit = {
+fun homePage(): HTML.() -> Unit = {
   composure(title = "Home") {
     comment("Home page welcome")
     article(classes = "welcome front-and-center") {

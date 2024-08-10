@@ -13,7 +13,7 @@ import io.ktor.server.routing.routing
 import me.strangepan.website.errors.error403
 import me.strangepan.website.errors.error404
 import me.strangepan.website.errors.error500
-import me.strangepan.website.home.HOME_PAGE
+import me.strangepan.website.home.homePage
 
 fun Application.configureRouting() {
   install(Resources)
@@ -30,7 +30,7 @@ fun Application.configureRouting() {
   }
   routing {
     get("/") {
-      call.respondHtml(HttpStatusCode.OK, HOME_PAGE)
+      call.respondHtml(HttpStatusCode.OK, homePage())
     }
     staticResources("/templates", "templates")
     staticResources("/images", "images")
