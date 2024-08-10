@@ -48,7 +48,7 @@ inline fun HTML.composure(title: String? = null, crossinline content: FlowConten
         div(classes = "title") {
           a(href = "/") {
             img(classes = "profile-picture logo", src = "/images/profile.jpg")
-            +"Dan Andrus"
+            +" Dan Andrus"
           }
         }
 
