@@ -12,6 +12,7 @@ import io.ktor.server.routing.get
 import io.ktor.server.routing.routing
 import me.strangepan.website.errors.error403
 import me.strangepan.website.errors.error404
+import me.strangepan.website.errors.error500
 import me.strangepan.website.home.HOME_PAGE
 
 fun Application.configureRouting() {
@@ -22,6 +23,9 @@ fun Application.configureRouting() {
     }
     status(HttpStatusCode.Forbidden) { call, code ->
       call.respondHtml(code, error403())
+    }
+    status(HttpStatusCode.InternalServerError) { call, code ->
+      call.respondHtml(code, error500())
     }
   }
   routing {
