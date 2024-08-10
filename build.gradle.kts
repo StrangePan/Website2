@@ -25,6 +25,7 @@ repositories {
 }
 
 dependencies {
+  implementation("io.ktor:ktor-server-status-pages")
   implementation("io.ktor:ktor-server-core-jvm")
   implementation("io.ktor:ktor-server-resources-jvm")
   implementation("io.ktor:ktor-server-html-builder-jvm")
