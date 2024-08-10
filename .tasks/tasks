@@ -1,20 +1,25 @@
 # tasks
-0p4pqoswdohj;open;Add favicons;;;
+0p4pqoswdohj;complete;Add favicons;;;
 2xyl44yvqhlg;open;Add project Stacker!;;;
-98ht3318ecac;open;Add home page;;;
+98ht3318ecac;complete;Add home page;;;
 b8iaz8aiksnp;open;Add project YouTube Theater;;;
 bv9r991oechq;open;Add projects page;;;
+ciiprfy7qnbo;open;Add 404 error handling;;;
 gno7pbms22k4;open;Add project Parallax Scrolling;;;
+jamp03945pd2;open;Add 500 error handling;;;
 mn49x8z708td;open;Add project Scuffle;;;
 n6wlg8j013mh;open;Add project This Website;;;
 nw4zk9wt7xj6;open;Add project Questline;;;
 uclt73r0f6q8;open;Add resume page;;;
 vrjj92kxmsti;open;Add project Omnia;;;
 # dependencies
+0p4pqoswdohj;98ht3318ecac;
 2xyl44yvqhlg;bv9r991oechq;
 b8iaz8aiksnp;bv9r991oechq;
+bv9r991oechq;98ht3318ecac;
 gno7pbms22k4;bv9r991oechq;
 mn49x8z708td;bv9r991oechq;
-n6wlg8j013mh;bv9r991oechq;
-nw4zk9wt7xj6;bv9r991oechq;
-vrjj92kxmsti;bv9r991oechq;
+n6wlg8j013mh;2xyl44yvqhlg,b8iaz8aiksnp,gno7pbms22k4,mn49x8z708td;
+nw4zk9wt7xj6;2xyl44yvqhlg,b8iaz8aiksnp,gno7pbms22k4,mn49x8z708td;
+uclt73r0f6q8;98ht3318ecac;
+vrjj92kxmsti;2xyl44yvqhlg,b8iaz8aiksnp,gno7pbms22k4,mn49x8z708td;
