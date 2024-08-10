@@ -1,3 +1,6 @@
 [submodule "src/main/resources/projects/stacker"]
 	path = src/main/resources/projects/stacker
 	url = git@github.com:StrangePan/StackerHTML.git
+[submodule "src/main/resources/projects/web-theater"]
+	path = src/main/resources/projects/web-theater
+	url = git@github.com:StrangePan/WebTheater.git

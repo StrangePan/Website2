@@ -31,11 +31,11 @@ fun projectsPage(): HTML.() -> Unit = {
       description = "A simple game based on the arcade game by the same name using pure HTML5.",
       thumbnail = "project-stacker-thumbnail.png",
       directory = "stacker"),
-//    Project(
-//      name = "YouTube Theater",
-//      description = "An easy way to watch YouTube videos without distraction.",
-//      thumbnail = "project-yttheater-thumbnail.jpg",
-//      directory = "web-theater"),
+    Project(
+      name = "YouTube Theater",
+      description = "An easy way to watch YouTube videos without distraction.",
+      thumbnail = "project-yttheater-thumbnail.jpg",
+      directory = "web-theater"),
   )
 
   composure("Projects") {
