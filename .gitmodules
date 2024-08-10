@@ -1,0 +1,3 @@
+[submodule "src/main/resources/projects/stacker"]
+	path = src/main/resources/projects/stacker
+	url = git@github.com:StrangePan/StackerHTML.git

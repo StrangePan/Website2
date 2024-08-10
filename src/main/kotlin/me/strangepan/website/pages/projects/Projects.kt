@@ -26,11 +26,11 @@ fun projectsPage(): HTML.() -> Unit = {
       description = "A small experiment in parallax scrolling effects, written from scratch using jQuery.",
       thumbnail = "project-parallax-thumbnail.jpg",
       directory = "parallax"),
-//    Project(
-//      name = "Stacker!",
-//      description = "A simple game based on the arcade game by the same name using pure HTML5.",
-//      thumbnail = "project-stacker-thumbnail.png",
-//      directory = "stacker"),
+    Project(
+      name = "Stacker!",
+      description = "A simple game based on the arcade game by the same name using pure HTML5.",
+      thumbnail = "project-stacker-thumbnail.png",
+      directory = "stacker"),
 //    Project(
 //      name = "YouTube Theater",
 //      description = "An easy way to watch YouTube videos without distraction.",
