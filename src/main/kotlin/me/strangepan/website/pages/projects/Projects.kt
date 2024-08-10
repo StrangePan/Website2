@@ -15,12 +15,12 @@ data class Project(
 }
 
 fun projectsPage(): HTML.() -> Unit = {
-  val projects = arrayOf<Project>(
-//    Project(
-//      name = "Scuffle",
-//      description = "A PICO-8 game created for the Extra Credits Game Jam 5. Created by Dan Andrus and Alexander Biggs.",
-//      thumbnail = "project-scuffle-thumbnail.png",
-//      directory = "scuffle"),
+  val projects = arrayOf(
+    Project(
+      name = "Scuffle",
+      description = "A PICO-8 game created for the Extra Credits Game Jam 5. Created by Dan Andrus and Alexander Biggs.",
+      thumbnail = "project-scuffle-thumbnail.png",
+      directory = "scuffle"),
 //    Project(
 //      name = "Parallax Scrolling",
 //      description = "A small experiment in parallax scrolling effects, written from scratch using jQuery.",
