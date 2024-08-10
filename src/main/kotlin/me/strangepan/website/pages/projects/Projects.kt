@@ -21,11 +21,11 @@ fun projectsPage(): HTML.() -> Unit = {
       description = "A PICO-8 game created for the Extra Credits Game Jam 5. Created by Dan Andrus and Alexander Biggs.",
       thumbnail = "project-scuffle-thumbnail.png",
       directory = "scuffle"),
-//    Project(
-//      name = "Parallax Scrolling",
-//      description = "A small experiment in parallax scrolling effects, written from scratch using jQuery.",
-//      thumbnail = "project-parallax-thumbnail.jpg",
-//      directory = "parallax"),
+    Project(
+      name = "Parallax Scrolling",
+      description = "A small experiment in parallax scrolling effects, written from scratch using jQuery.",
+      thumbnail = "project-parallax-thumbnail.jpg",
+      directory = "parallax"),
 //    Project(
 //      name = "Stacker!",
 //      description = "A simple game based on the arcade game by the same name using pure HTML5.",
