@@ -1,11 +1,8 @@
 package me.strangepan.website.pages.home
 
-import java.io.File
 import kotlinx.html.*
 import me.strangepan.website.composure.composure
-import org.intellij.markdown.flavours.commonmark.CommonMarkFlavourDescriptor
-import org.intellij.markdown.html.HtmlGenerator
-import org.intellij.markdown.parser.MarkdownParser
+import me.strangepan.website.markdown.markdown
 
 fun homePage(): HTML.() -> Unit = {
   composure(title = "Home") {
@@ -27,26 +24,12 @@ fun homePage(): HTML.() -> Unit = {
 
     comment("About me information section")
     article(classes = "info columnar") {
-      unsafe {
-        val src = File(ClassLoader.getSystemResource("content/about_myself.md").file).readText()
-        val flavour = CommonMarkFlavourDescriptor()
-        val parsedTree = MarkdownParser(flavour).buildMarkdownTreeFromString(src)
-        val html = HtmlGenerator(src, parsedTree, flavour).generateHtml()
-        raw(html)
-      }
+      markdown("about_myself.md")
     }
 
     comment("About the site information section")
     article(classes = "info columnar") {
-      unsafe {
-        val src = File(ClassLoader.getSystemResource("content/about_this_site.md").file).readText()
-        val flavour = CommonMarkFlavourDescriptor()
-        val parsedTree = MarkdownParser(flavour).buildMarkdownTreeFromString(src)
-        val html = HtmlGenerator(src, parsedTree, flavour).generateHtml()
-          .substringAfter("<body>")
-          .substringBeforeLast("</body>")
-        raw(html)
-      }
+      markdown("about_this_site.md")
     }
   }
 }
