@@ -8,6 +8,7 @@ fun FlowContent.socialNav() {
       li {
         a(href = "https://cyberplace.social/@StrangePan") {
           title = "Mastodon"
+          rel = "me"
           span(classes = "fa fa-brands fa-mastodon icon")
           +"Mastodon"
         }
