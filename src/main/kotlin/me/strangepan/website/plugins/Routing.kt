@@ -13,7 +13,7 @@ import io.ktor.server.routing.routing
 import me.strangepan.website.errors.error403
 import me.strangepan.website.errors.error404
 import me.strangepan.website.errors.error500
-import me.strangepan.website.home.homePage
+import me.strangepan.website.pages.home.homePage
 
 fun Application.configureRouting() {
   install(Resources)

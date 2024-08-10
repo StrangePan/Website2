@@ -1,4 +1,4 @@
-package me.strangepan.website.home
+package me.strangepan.website.pages.home
 
 import java.io.File
 import kotlinx.html.*
