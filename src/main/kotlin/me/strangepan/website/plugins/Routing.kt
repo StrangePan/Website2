@@ -14,6 +14,7 @@ import me.strangepan.website.errors.error403
 import me.strangepan.website.errors.error404
 import me.strangepan.website.errors.error500
 import me.strangepan.website.pages.home.homePage
+import me.strangepan.website.pages.resume.resumePage
 
 fun Application.configureRouting() {
   install(Resources)
@@ -32,8 +33,12 @@ fun Application.configureRouting() {
     get("/") {
       call.respondHtml(HttpStatusCode.OK, homePage())
     }
+    get("/resume") {
+      call.respondHtml(HttpStatusCode.OK, resumePage())
+    }
     staticResources("/templates", "templates")
     staticResources("/images", "images")
     staticResources("/content", "content")
+    staticResources("/files", "files")
   }
 }
