@@ -1,6 +1,7 @@
 package me.strangepan.website.composure
 
 import kotlinx.html.*
+import me.strangepan.ktor.html.crossorigin
 import me.strangepan.website.prefabs.mainNav
 import me.strangepan.website.prefabs.socialNav
 
@@ -17,6 +18,7 @@ inline fun HTML.composure(title: String? = null, crossinline content: FlowConten
     title { +"${ title?.trim()?.plus(" - ")?:""}Dan Andrus" }
 
     comment("Remote CSS links")
+    script(src = "https://kit.fontawesome.com/9ff4824d1e.js") { crossorigin = "anonymous" }
     link(rel = "stylesheet", type = "text/css", href = "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
     link(rel = "stylesheet", type = "text/css", href = "//fonts.googleapis.com/css?family=Tangerine:400,700|Open+Sans:300italic,700italic,300,700")
 
