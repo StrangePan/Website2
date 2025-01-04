@@ -51,7 +51,7 @@ inline fun HTML.composure(title: String? = null, crossinline content: FlowConten
         role = "banner"
         div(classes = "title") {
           a(href = "/") {
-            img(classes = "profile-picture logo", src = "/images/profile.jpg")
+            img(classes = "profile-picture logo", src = "/images/profile.png")
             +" Dan Andrus"
           }
         }
