@@ -14,31 +14,10 @@ fun FlowContent.socialNav() {
         }
       }
       li {
-        a(href = "https://www.twitter.com/StrangePan") {
-          title = "Twitter"
-          span(classes = "fa fa-twitter icon")
-          +"Twitter"
-        }
-      }
-      li {
-        a(href = "https://www.facebook.com/Deaboy100") {
-          title = "Facebook"
-          span(classes = "fa fa-facebook icon")
-          +"Facebook"
-        }
-      }
-      li {
         a(href = "https://www.github.com/StrangePan") {
           title = "Github"
           span(classes = "fa fa-github icon")
           +"GitHub"
-        }
-      }
-      li {
-        a(href = "https://www.linkedin.com/in/daniel-andrus-259a27a3") {
-          title = "LinkedIn"
-          span(classes = "fa fa-linkedin-square icon")
-          +"LinkedIn"
         }
       }
       li {
