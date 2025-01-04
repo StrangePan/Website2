@@ -1,5 +1,8 @@
 package me.strangepan.website.composure
 
+import java.time.Year
+import java.util.Calendar
+import java.util.Date
 import kotlinx.html.*
 import me.strangepan.website.prefabs.mainNav
 import me.strangepan.website.prefabs.socialNav
@@ -73,7 +76,7 @@ inline fun HTML.composure(title: String? = null, crossinline content: FlowConten
 
         comment("Copyright info")
         div(classes = "copyright") {
-          +"© 2014-2024 Daniel Andrus"
+          +"© 2014-${Calendar.getInstance().get(Calendar.YEAR)} Daniel Andrus"
         }
         div(classes = "copyright") {
           a(href = "http://fontawesome.io/") { +"Font Awesome" }
