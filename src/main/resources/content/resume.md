@@ -1,6 +1,6 @@
 # Profile
 
-<img src="/images/profile@2x.png" class="top right" width="256" height="256" />
+<img src="/images/profile@2x.png" class="top right"/>
 
 Talented and educated software engineer with a strong desire to build quality 
 products that delight and empower users. Places high value in clear and 
