@@ -1,8 +1,6 @@
 package me.strangepan.website.composure
 
-import java.time.Year
 import java.util.Calendar
-import java.util.Date
 import kotlinx.html.*
 import me.strangepan.website.prefabs.mainNav
 import me.strangepan.website.prefabs.socialNav
