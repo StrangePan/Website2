@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "me.strangepan.website"
-version = "1.0.1"
+version = "1.0.2"
 
 application {
   mainClass.set("io.ktor.server.netty.EngineMain")
