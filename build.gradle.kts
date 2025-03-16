@@ -6,12 +6,12 @@ val jetbrains_markdown_version: String by project
 
 plugins {
   kotlin("jvm") version "2.1.0"
-  id("io.ktor.plugin") version "3.0.2"
+  id("io.ktor.plugin") version "3.1.1"
   id("org.jetbrains.kotlin.plugin.serialization") version "2.1.0"
 }
 
 group = "me.strangepan.website"
-version = "1.0.2"
+version = "1.0.3"
 
 application {
   mainClass.set("io.ktor.server.netty.EngineMain")
@@ -26,6 +26,7 @@ repositories {
 }
 
 dependencies {
+  implementation("io.ktor:ktor-network-tls-certificates")
   implementation("io.ktor:ktor-server-status-pages")
   implementation("io.ktor:ktor-server-core-jvm")
   implementation("io.ktor:ktor-server-resources-jvm")
