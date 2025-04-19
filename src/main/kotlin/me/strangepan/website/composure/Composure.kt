@@ -2,20 +2,19 @@ package me.strangepan.website.composure
 
 import java.util.Calendar
 import kotlinx.html.*
-import me.strangepan.website.prefabs.mainNav
 import me.strangepan.website.prefabs.socialNav
 
-inline fun HTML.composure(title: String? = null, crossinline content: FlowContent.() -> Unit = {}) {
+inline fun HTML.composure(title: String, crossinline content: FlowContent.() -> Unit = {}) {
   head {
     comment("Meta information")
     meta(charset = "UTF-8")
-    meta(name = "description", content = "Personal web site of Daniel 'StrangePan' Ernest Andrus II")
-    meta(name = "keywords", content = "personal, sandbox, blog, code, custom, daniel, dan, deaboy, andrus, strangepan")
-    meta(name = "author", content = "Daniel Andrus")
+    meta(name = "description", content = "Dan's old-fashioned personal web site.")
+    meta(name = "keywords", content = "personal, sandbox, blog, code, custom, daniel, dan, andrus, strangepan")
+    meta(name = "author", content = "Dan Andrus")
     meta(name = "viewport", content = "width=device-width, initial-scale=1, user-scalable=1")
 
     comment("Page title")
-    title { +"${ title?.trim()?.plus(" - ")?:""}Dan Andrus" }
+    title { +title.trim() }
 
     comment("Remote CSS links")
     script(src = "https://kit.fontawesome.com/9ff4824d1e.js", crossorigin = ScriptCrossorigin.anonymous) {}
@@ -53,8 +52,7 @@ inline fun HTML.composure(title: String? = null, crossinline content: FlowConten
             +" Dan Andrus"
           }
         }
-
-        mainNav()
+        socialNav()
       }
 
       main {

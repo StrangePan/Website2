@@ -67,6 +67,7 @@ nav.main ul {
 	overflow: hidden;
 	max-width: 36em;
 	margin: 0 auto;
+	font-size: 2rem;
 }
 nav.main li {
 	display: block;
