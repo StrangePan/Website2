@@ -2,7 +2,6 @@ package me.strangepan.website.plugins
 
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.Application
-import io.ktor.server.application.call
 import io.ktor.server.application.install
 import io.ktor.server.html.respondHtml
 import io.ktor.server.http.content.staticResources
