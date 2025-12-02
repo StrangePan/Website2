@@ -9,15 +9,14 @@ fun homePage(): HTML.() -> Unit = {
   composure(title = "Dan Andrus") {
     comment("Home page welcome")
     article(classes = "welcome front-and-center") {
-      header {
-        h1 {
-          +"Vido Gams and Code"
-        }
+      h1 {
+        +"Welcome"
       }
-      section {
-        p {
-          +"a playground for projects and ideas"
-        }
+      p {
+        +"to my hand-coded personal website."
+      }
+      p {
+        +"Check out some of my personal and professional projects below."
       }
     }
 

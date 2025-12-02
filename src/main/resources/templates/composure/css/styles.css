@@ -258,20 +258,20 @@ article footer {
 	font-size: 6em;
 	font-weight: 700;
 }
-
-/* Fanceh animation stuff */
-.welcome header,
-.welcome section {
-	position: relative;
-
-	-webkit-animation: float-in 1s ease-out 1s;
-	animation: float-in 1s ease-out 1s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
+.front-and-center.welcome {
+  margin: 0 auto;
+  padding: 10em 0;
+  max-width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/prague.jpg") center;
+  background-size: cover;
+  box-shadow: inset 0px 20px 20px -10px rgba(0, 0, 0, 0.5),
+              inset 0px -20px 20px -10px rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
 }
-.welcome section {
-	-webkit-animation-delay: 1500ms;
-	animation-delay: 1500ms;
+.front-and-center.welcome p {
+  color: #FFFFFF;
+  text-shadow: 0 0 7px rgba(0, 0, 0, 1);
+  font-weight: 600;
 }
 
 /* Project list */
@@ -309,35 +309,6 @@ article footer {
 .timestamp {
 	font-weight: bold;
 }
-
-
-
-/********************************* Animations *********************************/
-
-
-
-/* float-in animation */
-@-webkit-keyframes float-in {
-	from {
-		top: 20px;
-		opacity: 0;
-	}
-	to {
-		top: 0;
-		opacity: 1;
-	}
-}
-@keyframes float-in {
-	from {
-		top: 20px;
-		opacity: 0;
-	}
-	to {
-		top: 0;
-		opacity: 1;
-	}
-}
-
 
 
 /****************************** Navigation Styles *****************************/
@@ -425,12 +396,6 @@ nav.simple li:first-of-type:before {
 
 /******************************** Special Cases *******************************/
 
-
-#welcome-image {
-  background-color: none;
-  background-image: none;
-  box-shadow: none;
-}
 
 .front-and-center.error h1 {
 	font-size: 4em;
