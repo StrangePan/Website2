@@ -2,6 +2,7 @@ plugins {
   kotlin("jvm") version "2.2.21"
   id("io.ktor.plugin") version "3.3.3"
   id("org.jetbrains.kotlin.plugin.serialization") version "2.2.21"
+  id("name.remal.generate-sources") version "2.0.4"
 }
 
 group = "me.strangepan.website"
@@ -32,4 +33,12 @@ dependencies {
   implementation(libs.logback)
   testImplementation(libs.ktorServerTestHostJvm)
   testImplementation(libs.kotlinTestJunit)
+}
+
+generateSources.forMainSourceSet.java {
+  classFile("me.strangepan.website", "Version") {
+    block("public final class Version") {
+      line("public static final String VERSION = \"${project.version}\";")
+    }
+  }
 }

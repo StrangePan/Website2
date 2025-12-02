@@ -3,6 +3,7 @@ package me.strangepan.website.composure
 import java.util.Calendar
 import kotlinx.html.*
 import me.strangepan.website.prefabs.socialNav
+import me.strangepan.website.Version
 
 inline fun HTML.composure(title: String, crossinline content: FlowContent.() -> Unit = {}) {
   head {
@@ -72,6 +73,7 @@ inline fun HTML.composure(title: String, crossinline content: FlowContent.() -> 
 
         comment("Copyright info")
         div(classes = "copyright") {
+          +"Version ${Version.VERSION}\n"
           +"© 2014-${Calendar.getInstance().get(Calendar.YEAR)} Daniel Andrus"
         }
         div(classes = "copyright") {
