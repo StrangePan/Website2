@@ -12,6 +12,11 @@
 
 
 /* Header elements rules */
+#header {
+  flex-direction: column;
+  align-items: center;
+  justify-content: normal;
+}
 #header .title {
 	margin: 0 0 0.5em 0;
 	text-align: center;
@@ -25,15 +30,6 @@
 .front-and-center {
 	margin-top: 2em;
 	margin-bottom: 4em;
-}
-
-/* Footer elements rules */
-#footer nav.social {
-	float: right;
-	margin-left: 1em;
-}
-#footer nav.simple {
-	text-align: center;
 }
 
 
@@ -60,36 +56,14 @@
 
 /****************************** Navigation Styles *****************************/
 
-
-
-/* Main nav rules */
-nav.main ul {
-	overflow: hidden;
-	max-width: 36em;
-	margin: 0 auto;
-	font-size: 2rem;
+/* Footer elements rules */
+#footer nav.social {
+  flex-direction: column;
+  align-items: stretch;
 }
-nav.main li {
-	display: block;
-	float: left;
-	margin-bottom: 0.75em;
-	width: 50%;
+#footer nav.social ul {
+  flex-direction: column;
 }
-
-
-
-/* Social nav rules */
-nav.social li {
-	text-align: right;
-	margin-bottom: 0.5em;
-}
-nav.social .icon {
-	float: right;
-	margin: 0.22em 0 0 0.4em;
-	vertical-align: text-bottom;
-}
-
-
 
 /******************************** Special Cases *******************************/
 

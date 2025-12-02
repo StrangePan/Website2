@@ -56,8 +56,14 @@ a i.fa-external-link {
 	transition: padding 300ms linear;
 }
 #header {
-	padding-top: 0.5em;
+	padding-top: 24px;
 	min-height: 75px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: space-between;
 }
 #content {
 	min-height: 300px;
@@ -113,16 +119,8 @@ hr {
 	box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.4);
 }
 
-/* Footer elements rules */
-#footer nav.social {
-	font-size: 1.5em;
-}
-
-
 
 /******************************* Content Styles *******************************/
-
-
 
 /* Article styles */
 article {
@@ -344,67 +342,37 @@ article footer {
 
 /****************************** Navigation Styles *****************************/
 
-
-
-/* Main nav rules */
-nav.main {
-	display: block;
-	margin: 0;
-	padding: 0;
-}
-nav.main ul {
-	display: block;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-nav.main li {
-	margin: 0;
-	padding: 0;
-
-	text-align: center;
-}
-nav.main li,
-nav.main a {
-	/* Combine these two for non-link menu items */
-
-	font-size: 1.6rem;
-	font-weight: 600;
-	text-decoration: none;
-	color: #555555;
-}
-nav.main a {
-	transition: color 300ms ease;
-}
-nav.main a:hover,
-nav.main a:active,
-nav.main a:focus {
-	color: #000000;
-}
-
-
-
 /* Social nav rules */
 nav.social {
-	display: block;
+	display: inline-flex;
 	margin: 0;
 	padding: 0;
-	font-size: 1em;
+	font-size: 2rem;
+  flex-direction: row;
+}
+#footer nav.social {
+  float: right;
+  margin-left: 1em;
 }
 nav.social ul {
-	display: block;
+	display: inline-flex;
 	list-style: none;
 	margin: 0;
 	padding: 0;
+  overflow: hidden;
 }
 nav.social li {
 	display: block;
 	margin: 0;
-	padding: 0;
+	padding: 0.4em;
 }
 nav.social a {
+  display: block;
 	color: inherit;
 	text-decoration: none;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
 }
 nav.social a:hover,
 nav.social a:active,

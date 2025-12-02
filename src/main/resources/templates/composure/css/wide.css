@@ -1,31 +1,11 @@
 @media all and (min-width: 1001px) {
 
-
-
-/* Footer elements rules */
-#footer nav.social,
-#header nav.social {
-	float: right;
-}
-
-
-
 /******************************* Layout Styles ********************************/
 
 
 #page {
 	padding-left: 36px;
 	padding-right: 36px;
-}
-#header {
-	overflow: hidden;
-}
-#header:before {
-	content: " ";
-	display: block;
-	float: right;
-	transition: height 300ms ease-out;
-	height: 0em;
 }
 #header .title {
 	margin-bottom: 0.2em;
@@ -91,31 +71,5 @@ article p {
 
 
 /****************************** Navigation Styles *****************************/
-
-
-/* Social nav rules */
-nav.social ul {
-  font-size: 2rem;
-	overflow: hidden;
-}
-nav.social li {
-	padding: 0.4em;
-	float: left;
-}
-nav.social a {
-	display: block;
-	margin: 0;
-	padding: 0;
-}
-/* Fanceh animation stuff */
-nav.social li {
-	width: 6.5em;
-}
-nav.social a {
-	white-space: nowrap;
-}
-
-
-
 
 }
