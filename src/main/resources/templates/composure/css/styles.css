@@ -92,9 +92,6 @@ a i.fa-external-link {
 
 
 /* Basic page design rules */
-#content {
-	overflow: hidden;
-}
 #footer {
 	overflow: hidden;
 	font-size: 1.4rem;
@@ -303,20 +300,26 @@ article footer {
 
 /* Project list */
 .project-list {
-	overflow: hidden;
 	padding: 0;
-	margin: 0;
+  margin: 0 0 3em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  justify-content: space-between;
+  gap: var(--content-padding);
 }
 .project-list li {
 	display: block;
 	position: relative;
 	padding: 0;
-	margin: 0 0 2em;
+  margin: 0;
+  transition: transform 300ms ease-out;
 }
 .project-list li .thumbnail {
 	display: block;
 	width: 100%;
-	box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 8px 20px 5px rgba(0, 0, 0, 0.5);
 }
 .project-list li h2 {
 	display: block;

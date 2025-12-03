@@ -22,6 +22,20 @@ fun homePage(): HTML.() -> Unit = {
     }
 
     section {
+      comment("About me information section")
+      article(classes = "info columnar") {
+        markdown("about_myself.md")
+      }
+
+      comment("About the site information section")
+      article(classes = "info columnar") {
+        markdown("about_this_site.md")
+      }
+    }
+
+    hr()
+
+    section {
       val projects = arrayOf(
         Project(
           name = "Scuffle",
@@ -58,20 +72,6 @@ fun homePage(): HTML.() -> Unit = {
             }
           }
         }
-      }
-    }
-
-    hr()
-
-    section {
-      comment("About me information section")
-      article(classes = "info columnar") {
-        markdown("about_myself.md")
-      }
-
-      comment("About the site information section")
-      article(classes = "info columnar") {
-        markdown("about_this_site.md")
       }
     }
   }

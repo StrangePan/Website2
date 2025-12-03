@@ -1,6 +1,5 @@
 # Projects
 
-Here you can find a respository of past and active projects of mine.  
-Each is an experiment in something new.
+Here's some of the cool stuff I've done for work and for play.
 
 Enjoy.
