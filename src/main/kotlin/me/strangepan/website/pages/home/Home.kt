@@ -38,6 +38,12 @@ fun homePage(): HTML.() -> Unit = {
     section {
       val projects = arrayOf(
         Project.externalProject(
+          name = "Popped to Scale",
+          description = "A game made in a weekend for the GMTK Game Jam 2024. We just wanted to get our feet wet " +
+            "with 3D after years of working in 3D. Posted to itch.io and to GitHub.",
+          thumbnail = "project-poppedtoscale-thumbnail.jpg",
+          url = "https://llemec.itch.io/popped-to-scale"),
+        Project.externalProject(
           name = "Omnia",
           description = "A thin library of utilities, data structures, and algorithms written in Kotlin.",
           thumbnail = "project-omnia-thumbnail.jpg",
