@@ -93,19 +93,13 @@ a i.fa-external-link {
 
 /* Basic page design rules */
 #footer {
-	overflow: hidden;
 	font-size: 1.4rem;
-}
-#footer:before { /* A fake HR at the top of the footer */
-  content: ' ';
-  display: block;
-  font-size: 0;
-  height: 1px;
-  background: var(--divider-color);
-  margin-bottom: 40px;
-}
-#footer .copyright {
-	margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--content-padding);
 }
 hr {
 	display: block;
@@ -351,10 +345,6 @@ nav.social {
 	font-size: 2rem;
   flex-direction: row;
 }
-#footer nav.social {
-  float: right;
-  margin-left: 1em;
-}
 nav.social ul {
 	display: inline-flex;
 	list-style: none;
@@ -362,10 +352,17 @@ nav.social ul {
 	padding: 0;
   overflow: hidden;
 }
+#footer nav.social ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: start;
+  justify-content: end;
+}
 nav.social li {
 	display: block;
 	margin: 0;
-	padding: 0.4em;
+	padding: 0.4em 0.6em;
 }
 nav.social a {
   display: block;
@@ -388,6 +385,9 @@ nav.social .icon {
 	text-align: center;
 }
 
+.copyright p {
+  white-space: nowrap;
+}
 
 
 /* Simple nav rules */

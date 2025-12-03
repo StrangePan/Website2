@@ -4,6 +4,7 @@ import java.util.Calendar
 import kotlinx.html.*
 import me.strangepan.website.prefabs.socialNav
 import me.strangepan.website.Version
+import me.strangepan.website.prefabs.SocialNavType
 
 inline fun HTML.composure(title: String, crossinline content: FlowContent.() -> Unit = {}) {
   head {
@@ -53,7 +54,7 @@ inline fun HTML.composure(title: String, crossinline content: FlowContent.() -> 
             +" Dan Andrus"
           }
         }
-        socialNav()
+        socialNav(SocialNavType.Minimal)
       }
 
       main {
@@ -61,6 +62,8 @@ inline fun HTML.composure(title: String, crossinline content: FlowContent.() -> 
         role = "main"
 
         content()
+
+        hr()
       }
 
       comment("Page footer")
@@ -68,18 +71,20 @@ inline fun HTML.composure(title: String, crossinline content: FlowContent.() -> 
         id = "footer"
         role = "contentinfo"
 
-        comment("Everybody loves social links. Right?")
-        socialNav()
-
         comment("Copyright info")
         div(classes = "copyright") {
-          +"Version ${Version.VERSION}\n"
-          +"© 2014-${Calendar.getInstance().get(Calendar.YEAR)} Daniel Andrus"
+          p {
+            +"Version ${Version.VERSION}\n"
+            +"© 2014-${Calendar.getInstance().get(Calendar.YEAR)} Daniel Andrus"
+          }
+          p {
+            a(href = "http://fontawesome.io/") { +"Font Awesome" }
+            +" by Dave Gandy"
+          }
         }
-        div(classes = "copyright") {
-          a(href = "http://fontawesome.io/") { +"Font Awesome" }
-          +" by Dave Gandy"
-        }
+
+        comment("Everybody loves social links. Right?")
+        socialNav(SocialNavType.Full)
       }
     }
   }
