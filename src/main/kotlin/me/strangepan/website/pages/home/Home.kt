@@ -38,6 +38,11 @@ fun homePage(): HTML.() -> Unit = {
     section {
       val projects = arrayOf(
         Project.externalProject(
+          name = "Omnia",
+          description = "A thin library of utilities, data structures, and algorithms written in Kotlin.",
+          thumbnail = "project-omnia-thumbnail.jpg",
+          url = "https://github.com/StrangePan/omnia"),
+        Project.externalProject(
           name = "YouTube Android",
           description = "The official YouTube app for Android.",
           thumbnail = "project-youtube-thumbnail.jpg",
