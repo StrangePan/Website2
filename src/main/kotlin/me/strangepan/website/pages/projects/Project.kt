@@ -5,6 +5,7 @@ data class Project(
   val description: String,
   val thumbnailUrl: String,
   val pageUrl: String,
+  val isExternal: Boolean,
 ) {
 
   companion object {
@@ -13,7 +14,8 @@ data class Project(
         name = name,
         description = description,
         thumbnailUrl = "/images/$thumbnail",
-        pageUrl = "/projects/$directory/"
+        pageUrl = "/projects/$directory/",
+        isExternal = false,
       )
 
     fun externalProject(name: String, description: String, thumbnail: String, url: String) =
@@ -21,7 +23,8 @@ data class Project(
         name = name,
         description = description,
         thumbnailUrl = "/images/$thumbnail",
-        pageUrl = url
+        pageUrl = url,
+        isExternal = true,
       )
   }
 }

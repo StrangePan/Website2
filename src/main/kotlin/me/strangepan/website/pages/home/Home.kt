@@ -90,7 +90,13 @@ fun homePage(): HTML.() -> Unit = {
             attributes["title"] = "${project.name}: ${project.description}"
             a(href = project.pageUrl) {
               img(classes = "thumbnail", src = project.thumbnailUrl)
-              h2 { +project.name }
+              h2 {
+                +project.name
+                if (project.isExternal) {
+                  entity(Entities.NonBreakingSpace)
+                  i(classes = "fa-solid fa-up-right-from-square")
+                }
+              }
             }
           }
         }
