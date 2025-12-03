@@ -37,22 +37,27 @@ fun homePage(): HTML.() -> Unit = {
 
     section {
       val projects = arrayOf(
-        Project(
+        Project.externalProject(
+          name = "YouTube Android",
+          description = "The official YouTube app for Android.",
+          thumbnail = "project-youtube-thumbnail.jpg",
+          url = "https://play.google.com/store/apps/details?id=com.google.android.youtube"),
+        Project.localProject(
           name = "Scuffle",
           description = "A PICO-8 game created for the Extra Credits Game Jam 5. Created by Dan Andrus and Alexander Biggs.",
           thumbnail = "project-scuffle-thumbnail.png",
           directory = "scuffle"),
-        Project(
+        Project.localProject(
           name = "Parallax Scrolling",
           description = "A small experiment in parallax scrolling effects, written from scratch using jQuery.",
           thumbnail = "project-parallax-thumbnail.jpg",
           directory = "parallax"),
-        Project(
+        Project.localProject(
           name = "Stacker!",
           description = "A simple game based on the arcade game by the same name using pure HTML5.",
           thumbnail = "project-stacker-thumbnail.png",
           directory = "stacker"),
-        Project(
+        Project.localProject(
           name = "YouTube Theater",
           description = "An easy way to watch YouTube videos without distraction.",
           thumbnail = "project-yttheater-thumbnail.jpg",
