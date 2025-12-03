@@ -4,7 +4,16 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
-
+/* Declares support for light and dark theme, and enables the light-dark() function */
+:root {
+  color-scheme: light dark;
+  --divider-color: #AAAAAA;
+  --text-color: light-dark(#555555, #EEEEEE);
+  --highlighted-text-color: light-dark(#000000, #FFFFFF);
+  --welcome-text-color: #FFFFFF;
+  --content-padding: 36px;
+  --content-max-width: 1200px;
+}
 
 
 /* Define the typeface for the page */
@@ -15,8 +24,7 @@ body {
 	font-size: 1.4rem;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 300;
-	color: #555555;
-	background-color: #FAFAFA;
+	color: var(--text-color)
 }
 h1 {
 	font-size: 1.5em;
@@ -24,14 +32,17 @@ h1 {
 h2 {
 	font-size: 1.25em;
 }
+strong {
+  font-weight: bold;
+}
 
 /* Some link customizations */
 a, a:visited {
-	color: #555555;
+	color: var(--text-color);
 	text-decoration: underline;
 }
 a:hover, a:focus, a:active {
-	color: #000000;
+	color: var(--highlighted-text-color);
 }
 a:hover, a:active {
 	text-decoration: none;
@@ -51,20 +62,29 @@ a i.fa-external-link {
 	padding: 0;
 }
 #page {
-	margin: 0 auto;
-	max-width: 1200px;
-	transition: padding 300ms linear;
+  display: block;
+}
+#header, #content > *, #footer {
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: var(--content-padding);
 }
 #header {
-	padding-top: 0.5em;
+	padding-top: 24px;
 	min-height: 75px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: space-between;
 }
 #content {
-	min-height: 300px;
+	min-height: 33em;
 }
 #footer {
 	margin-top: 20px;
-	padding-top: 20px;
+	padding-top: 0;
 	padding-bottom: 50px;
 	min-height: 50px;
 }
@@ -72,26 +92,26 @@ a i.fa-external-link {
 
 
 /* Basic page design rules */
-#header {
-	box-shadow: 0px 16px 32px -30px rgba(0, 0, 0, 0.375);
-}
-#content {
-	overflow: hidden;
-}
 #footer {
-	overflow: hidden;
 	font-size: 1.4rem;
-	border-top: 1px solid #AAAAAA;
-}
-#footer .copyright {
-	margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--content-padding);
 }
 hr {
 	display: block;
 	margin: 1em 0;
 	height: 1px;
 	border: none;
-	background: #AAAAAA;
+	background: var(--divider-color);
+}
+#content > hr {
+  /* margin-inline needs to be auto in order to center it properly, so we have to limit its size by calculating a width. */
+  width: calc(100% - var(--content-padding) * 2);
+  padding-inline: 0;
 }
 
 
@@ -116,23 +136,15 @@ hr {
 	box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.4);
 }
 
-/* Footer elements rules */
-#footer nav.social {
-	font-size: 1.5em;
-}
-
-
 
 /******************************* Content Styles *******************************/
-
-
 
 /* Article styles */
 article {
 	font-size: 1.4rem;
 }
 article p, article p a, article p a:visited {
-	color: #000000;
+	color: var(--highlighted-text-color);
 }
 article p {
   font-size: 1.6rem;
@@ -210,7 +222,7 @@ article footer {
 	margin-top: 2em;
 	text-transform: uppercase;
 	padding-bottom: 0.5em;
-	border-bottom: 1px solid #AAAAAA;
+	border-bottom: 1px solid var(--divider-color);
 }
 .document .subtitle {
 	text-transform: uppercase;
@@ -244,7 +256,6 @@ article footer {
 	margin: 10em auto;
 	max-width: 50em;
 	text-align: center;
-	transition: margin 300ms linear;
 }
 .front-and-center h1 {
 	margin: 0;
@@ -263,51 +274,59 @@ article footer {
 	font-size: 6em;
 	font-weight: 700;
 }
-
-/* Fanceh animation stuff */
-.welcome header,
-.welcome section {
-	position: relative;
-
-	-webkit-animation: float-in 1s ease-out 1s;
-	animation: float-in 1s ease-out 1s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
+.front-and-center.welcome {
+  margin: 0 auto;
+  padding: 10em 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/prague.jpg") center;
+  background-size: cover;
+  box-shadow: inset 0px 20px 20px -10px rgba(0, 0, 0, 0.5),
+              inset 0px -20px 20px -10px rgba(0, 0, 0, 0.5);
+  color: var(--welcome-text-color);
 }
-.welcome section {
-	-webkit-animation-delay: 1500ms;
-	animation-delay: 1500ms;
+#content > .front-and-center.welcome {
+  max-width: unset;
+}
+.front-and-center.welcome p {
+  color: var(--welcome-text-color);
+  text-shadow: 0 0 7px rgba(0, 0, 0, 1);
+  font-weight: 600;
 }
 
 /* Project list */
 .project-list {
-	overflow: hidden;
 	padding: 0;
-	margin: 0;
+  margin: 0 0 3em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  justify-content: space-between;
+  gap: var(--content-padding);
 }
 .project-list li {
 	display: block;
 	position: relative;
 	padding: 0;
-	margin: 0 0 2em;
+  margin: 0;
+  transition: transform 300ms ease-out;
 }
 .project-list li .thumbnail {
 	display: block;
 	width: 100%;
-	box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 8px 20px 5px rgba(0, 0, 0, 0.5);
 }
 .project-list li h2 {
 	display: block;
 	position: absolute;
 	margin: 0;
-	padding: 4px;
-	bottom: 0;
-	left: 0;
+	padding: 0;
+	bottom: 0.25em;
+	left: 0.5em;
 	right: 0;
 	font-size: 26px;
 	font-weight: bold;
 	color: #EFEFEF;
-	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+	text-shadow: 0 0 0.3em rgba(0, 0, 0, 1);
 }
 
 /* Miscellaneous */
@@ -316,103 +335,47 @@ article footer {
 }
 
 
-
-/********************************* Animations *********************************/
-
-
-
-/* float-in animation */
-@-webkit-keyframes float-in {
-	from {
-		top: 20px;
-		opacity: 0;
-	}
-	to {
-		top: 0;
-		opacity: 1;
-	}
-}
-@keyframes float-in {
-	from {
-		top: 20px;
-		opacity: 0;
-	}
-	to {
-		top: 0;
-		opacity: 1;
-	}
-}
-
-
-
 /****************************** Navigation Styles *****************************/
-
-
-
-/* Main nav rules */
-nav.main {
-	display: block;
-	margin: 0;
-	padding: 0;
-}
-nav.main ul {
-	display: block;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-nav.main li {
-	margin: 0;
-	padding: 0;
-
-	text-align: center;
-}
-nav.main li,
-nav.main a {
-	/* Combine these two for non-link menu items */
-
-	font-size: 1.6rem;
-	font-weight: 600;
-	text-decoration: none;
-	color: #555555;
-}
-nav.main a {
-	transition: color 300ms ease;
-}
-nav.main a:hover,
-nav.main a:active,
-nav.main a:focus {
-	color: #000000;
-}
-
-
 
 /* Social nav rules */
 nav.social {
-	display: block;
+	display: inline-flex;
 	margin: 0;
 	padding: 0;
-	font-size: 1em;
+	font-size: 2rem;
+  flex-direction: row;
 }
 nav.social ul {
-	display: block;
+	display: inline-flex;
 	list-style: none;
 	margin: 0;
 	padding: 0;
+  overflow: hidden;
+}
+#footer nav.social ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: start;
+  justify-content: end;
 }
 nav.social li {
 	display: block;
 	margin: 0;
-	padding: 0;
+	padding: 0.4em 0.6em;
 }
 nav.social a {
+  display: block;
 	color: inherit;
 	text-decoration: none;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
 }
 nav.social a:hover,
 nav.social a:active,
 nav.social a:focus {
-	color: #000000;
+	color: var(--highlighted-text-color);
 }
 nav.social .icon {
 	display: inline-block;
@@ -422,6 +385,9 @@ nav.social .icon {
 	text-align: center;
 }
 
+.copyright p {
+  white-space: nowrap;
+}
 
 
 /* Simple nav rules */
@@ -460,12 +426,6 @@ nav.simple li:first-of-type:before {
 
 /******************************** Special Cases *******************************/
 
-
-#welcome-image {
-  background-color: none;
-  background-image: none;
-  box-shadow: none;
-}
 
 .front-and-center.error h1 {
 	font-size: 4em;

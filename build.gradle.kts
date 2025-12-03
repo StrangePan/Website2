@@ -1,17 +1,12 @@
-
-val kotlin_version: String by project
-val logback_version: String by project
-val kotlinx_html_version: String by project
-val jetbrains_markdown_version: String by project
-
 plugins {
-  kotlin("jvm") version "2.1.0"
-  id("io.ktor.plugin") version "3.1.1"
-  id("org.jetbrains.kotlin.plugin.serialization") version "2.1.0"
+  kotlin("jvm") version "2.2.21"
+  id("io.ktor.plugin") version "3.3.3"
+  id("org.jetbrains.kotlin.plugin.serialization") version "2.2.21"
+  id("name.remal.generate-sources") version "2.0.4"
 }
 
 group = "me.strangepan.website"
-version = "1.0.3"
+version = "1.1.0"
 
 application {
   mainClass.set("io.ktor.server.netty.EngineMain")
@@ -26,16 +21,24 @@ repositories {
 }
 
 dependencies {
-  implementation("io.ktor:ktor-network-tls-certificates")
-  implementation("io.ktor:ktor-server-status-pages")
-  implementation("io.ktor:ktor-server-core-jvm")
-  implementation("io.ktor:ktor-server-resources-jvm")
-  implementation("io.ktor:ktor-server-html-builder-jvm")
-  implementation("io.ktor:ktor-server-netty-jvm")
-  implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:$kotlinx_html_version")
-  implementation("org.jetbrains:kotlin-css-jvm:1.0.0-pre.129-kotlin-1.4.20")
-  implementation("org.jetbrains:markdown:$jetbrains_markdown_version")
-  implementation("ch.qos.logback:logback-classic:$logback_version")
-  testImplementation("io.ktor:ktor-server-test-host-jvm")
-  testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+  implementation(libs.ktorNetworkTlsCertificates)
+  implementation(libs.ktorServerStatusPages)
+  implementation(libs.ktorServerCoreJvm)
+  implementation(libs.ktorServerResourcesJvm)
+  implementation(libs.ktorServerHtmlBuilderJvm)
+  implementation(libs.ktorServerNettyJvm)
+  implementation(libs.kotlinxHtml)
+  implementation(libs.kotlinCss)
+  implementation(libs.markdown)
+  implementation(libs.logback)
+  testImplementation(libs.ktorServerTestHostJvm)
+  testImplementation(libs.kotlinTestJunit)
+}
+
+generateSources.forMainSourceSet.java {
+  classFile("me.strangepan.website", "Version") {
+    block("public final class Version") {
+      line("public static final String VERSION = \"${project.version}\";")
+    }
+  }
 }

@@ -1,23 +1,17 @@
 # About Myself
 
-My name is Daniel Andrus. I play video games, write code, and start fun side
-projects. Sometimes I even finish those side projects. I also work as a
-full-time software engineer on the side. My Internet alias is "StrangePan"
-(previously "Deaboy"), and "vido gams and code" is my tagline.
+**I love to build things.** Especially in software and video games. I've been
+doing it for as long as I can remember. I once made a 5-foot grandfather
+clock out of K'nex with a ferris wheel as the pendulum and a rollercoaster
+in the back panel.
 
-I grew up in Southern California and earned my high school degree in 2009. In
-2010, I moved from Los Angeles to a little town called Spearfish, South Dakota.
-There, I attended college at Black Hills State University for two years while
-outside of classes I became interested in programming. In 2012, I transferred to
-the South Dakota School of Mines and Technology where I graduated with a
-bachelor's degree in computer science in May, 2016.
+**I love playing video games.** Indie, triple-A, retro classics, and experimental,
+you name it. Some all-time favorites are Outer Wilds, Death Stranding, and Super
+Mario World. I'd list more, but I don't feel like updating this text every few months.
+Check my Steam profile to see what I'm playing these days.
 
-Today, I am living back in California, in the lovely San Francisco Bay area
-where I work as a software engineer for YouTube. By day, I work hard to make the
-Android YouTube app better for everyone. By night, I play Magic the Gathering
-and watch Rick and Morty.
-
-As I continue to develop my career, my passion for programming and video games
-has not diminished. I have a number of small PC game projects that I work on
-when I want to try new ideas. Some of my side projects can be found on the
-[projects](/projects/) page of this site.
+**I love my career path.** I've worked on some really cool projects. I became
+a tech lead on the YouTube Android app. I then moved to Prague to work on
+Factorio: Space Age. And now, I'm starting my own business. I've worked on
+code health, test automation, graphics programming, optimization, Mac, iOS,
+Android development, and so many different languages.
