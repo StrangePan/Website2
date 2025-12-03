@@ -4,7 +4,14 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
-
+/* Declares support for light and dark theme, and enables the light-dark() function */
+:root {
+  color-scheme: light dark;
+  --divider-color: #AAAAAA;
+  --text-color: light-dark(#555555, #EEEEEE);
+  --highlighted-text-color: light-dark(#000000, #FFFFFF);
+  --welcome-text-color: #FFFFFF;
+}
 
 
 /* Define the typeface for the page */
@@ -15,8 +22,7 @@ body {
 	font-size: 1.4rem;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 300;
-	color: #555555;
-	background-color: #FAFAFA;
+	color: var(--text-color)
 }
 h1 {
 	font-size: 1.5em;
@@ -27,11 +33,11 @@ h2 {
 
 /* Some link customizations */
 a, a:visited {
-	color: #555555;
+	color: var(--text-color);
 	text-decoration: underline;
 }
 a:hover, a:focus, a:active {
-	color: #000000;
+	color: var(--highlighted-text-color);
 }
 a:hover, a:active {
 	text-decoration: none;
@@ -86,7 +92,7 @@ a i.fa-external-link {
 #footer {
 	overflow: hidden;
 	font-size: 1.4rem;
-	border-top: 1px solid #AAAAAA;
+	border-top: 1px solid var(--divider-color);
 }
 #footer .copyright {
 	margin-bottom: 1em;
@@ -96,7 +102,7 @@ hr {
 	margin: 1em 0;
 	height: 1px;
 	border: none;
-	background: #AAAAAA;
+	background: var(--divider-color);
 }
 
 
@@ -129,7 +135,7 @@ article {
 	font-size: 1.4rem;
 }
 article p, article p a, article p a:visited {
-	color: #000000;
+	color: var(--highlighted-text-color);
 }
 article p {
   font-size: 1.6rem;
@@ -207,7 +213,7 @@ article footer {
 	margin-top: 2em;
 	text-transform: uppercase;
 	padding-bottom: 0.5em;
-	border-bottom: 1px solid #AAAAAA;
+	border-bottom: 1px solid var(--divider-color);
 }
 .document .subtitle {
 	text-transform: uppercase;
@@ -266,13 +272,13 @@ article footer {
   background-size: cover;
   box-shadow: inset 0px 20px 20px -10px rgba(0, 0, 0, 0.5),
               inset 0px -20px 20px -10px rgba(0, 0, 0, 0.5);
-  color: #FFFFFF;
+  color: var(--welcome-text-color);
 }
 #content > .front-and-center.welcome {
   max-width: unset;
 }
 .front-and-center.welcome p {
-  color: #FFFFFF;
+  color: var(--welcome-text-color);
   text-shadow: 0 0 7px rgba(0, 0, 0, 1);
   font-weight: 600;
 }
@@ -351,7 +357,7 @@ nav.social a {
 nav.social a:hover,
 nav.social a:active,
 nav.social a:focus {
-	color: #000000;
+	color: var(--highlighted-text-color);
 }
 nav.social .icon {
 	display: inline-block;

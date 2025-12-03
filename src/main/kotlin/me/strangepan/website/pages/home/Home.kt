@@ -21,8 +21,6 @@ fun homePage(): HTML.() -> Unit = {
       }
     }
 
-    hr()
-
     section {
       val projects = arrayOf(
         Project(
