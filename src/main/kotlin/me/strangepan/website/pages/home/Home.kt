@@ -71,6 +71,7 @@ fun homePage(): HTML.() -> Unit = {
       ul(classes = "project-list") {
         for (project in projects) {
           li {
+            attributes["title"] = "${project.name}: ${project.description}"
             a(href = project.pageUrl) {
               img(classes = "thumbnail", src = project.thumbnailUrl)
               h2 { +project.name }
