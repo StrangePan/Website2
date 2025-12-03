@@ -13,6 +13,7 @@ fun homePage(): HTML.() -> Unit = {
         +"Welcome"
       }
       p {
+        entity(Entities.hellip)
         +"to my hand-coded personal website."
       }
       p {

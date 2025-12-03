@@ -3,7 +3,7 @@
 
 
 /* Basic page layout rules */
-#page {
+#header, #content > *, #footer {
 	padding-right: 24px;
 	padding-left: 24px;
 	max-width: 100%;
@@ -30,6 +30,10 @@
 .front-and-center {
 	margin-top: 2em;
 	margin-bottom: 4em;
+}
+.front-and-center.welcome {
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 
 

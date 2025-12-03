@@ -51,9 +51,11 @@ a i.fa-external-link {
 	padding: 0;
 }
 #page {
-	margin: 0 auto;
-	max-width: 1200px;
-	transition: padding 300ms linear;
+  display: block;
+}
+#header, #content > *, #footer {
+  max-width: 1200px;
+  margin-inline: auto;
 }
 #header {
 	padding-top: 24px;
@@ -66,7 +68,7 @@ a i.fa-external-link {
   justify-content: space-between;
 }
 #content {
-	min-height: 300px;
+	min-height: 33em;
 }
 #footer {
 	margin-top: 20px;
@@ -239,7 +241,6 @@ article footer {
 	margin: 10em auto;
 	max-width: 50em;
 	text-align: center;
-	transition: margin 300ms linear;
 }
 .front-and-center h1 {
 	margin: 0;
@@ -261,12 +262,14 @@ article footer {
 .front-and-center.welcome {
   margin: 0 auto;
   padding: 10em 0;
-  max-width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/prague.jpg") center;
   background-size: cover;
   box-shadow: inset 0px 20px 20px -10px rgba(0, 0, 0, 0.5),
               inset 0px -20px 20px -10px rgba(0, 0, 0, 0.5);
   color: #FFFFFF;
+}
+#content > .front-and-center.welcome {
+  max-width: unset;
 }
 .front-and-center.welcome p {
   color: #FFFFFF;

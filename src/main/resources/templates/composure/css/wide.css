@@ -3,10 +3,11 @@
 /******************************* Layout Styles ********************************/
 
 
-#page {
+#header, #content > *, #footer {
 	padding-left: 36px;
 	padding-right: 36px;
 }
+
 #header .title {
 	margin-bottom: 0.2em;
 	float: left;

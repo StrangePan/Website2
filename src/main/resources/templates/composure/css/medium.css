@@ -4,7 +4,7 @@
 /******************************* Layout Styles ********************************/
 
 
-#page {
+#header, #content > *, #footer {
 	padding-left: 24px;
 	padding-right: 24px;
 }
@@ -19,7 +19,10 @@
 	margin-top: 2.5em;
 	margin-bottom: 5.5em;
 }
-
+.front-and-center.welcome {
+  padding-top: 7em;
+  padding-bottom: 7em;
+}
 
 
 /******************************* Content Styles *******************************/
