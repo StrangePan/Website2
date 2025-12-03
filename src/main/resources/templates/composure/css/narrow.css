@@ -1,11 +1,12 @@
 @media all and (max-width: 700px) {
 
+:root {
+  --content-padding: 24px;
+}
 
 
 /* Basic page layout rules */
 #header, #content > *, #footer {
-	padding-right: 24px;
-	padding-left: 24px;
 	max-width: 100%;
 	overflow: hidden;
 }

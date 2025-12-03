@@ -1,12 +1,10 @@
 @media all and (min-width: 1001px) {
 
-/******************************* Layout Styles ********************************/
-
-
-#header, #content > *, #footer {
-	padding-left: 36px;
-	padding-right: 36px;
+:root {
+  --content-padding: 36px;
 }
+
+/******************************* Layout Styles ********************************/
 
 #header .title {
 	margin-bottom: 0.2em;

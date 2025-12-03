@@ -11,6 +11,8 @@ html, body {
   --text-color: light-dark(#555555, #EEEEEE);
   --highlighted-text-color: light-dark(#000000, #FFFFFF);
   --welcome-text-color: #FFFFFF;
+  --content-padding: 36px;
+  --content-max-width: 1200px;
 }
 
 
@@ -63,8 +65,9 @@ a i.fa-external-link {
   display: block;
 }
 #header, #content > *, #footer {
-  max-width: 1200px;
+  max-width: var(--content-max-width);
   margin-inline: auto;
+  padding-inline: var(--content-padding);
 }
 #header {
 	padding-top: 24px;
@@ -81,7 +84,7 @@ a i.fa-external-link {
 }
 #footer {
 	margin-top: 20px;
-	padding-top: 20px;
+	padding-top: 0;
 	padding-bottom: 50px;
 	min-height: 50px;
 }
@@ -95,7 +98,14 @@ a i.fa-external-link {
 #footer {
 	overflow: hidden;
 	font-size: 1.4rem;
-	border-top: 1px solid var(--divider-color);
+}
+#footer:before { /* A fake HR at the top of the footer */
+  content: ' ';
+  display: block;
+  font-size: 0;
+  height: 1px;
+  background: var(--divider-color);
+  margin-bottom: 40px;
 }
 #footer .copyright {
 	margin-bottom: 1em;
@@ -106,6 +116,11 @@ hr {
 	height: 1px;
 	border: none;
 	background: var(--divider-color);
+}
+#content > hr {
+  /* margin-inline needs to be auto in order to center it properly, so we have to limit its size by calculating a width. */
+  width: calc(100% - var(--content-padding) * 2);
+  padding-inline: 0;
 }
 
 

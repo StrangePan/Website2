@@ -1,13 +1,13 @@
 @media all and (min-width: 701px) and (max-width: 1000px) {
 
+:root {
+  --content-padding: 24px;
+}
+
 
 /******************************* Layout Styles ********************************/
 
 
-#header, #content > *, #footer {
-	padding-left: 24px;
-	padding-right: 24px;
-}
 #header .title {
 	margin-bottom: 0.2em;
 	float: left;
