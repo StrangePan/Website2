@@ -38,6 +38,11 @@ fun homePage(): HTML.() -> Unit = {
     section {
       val projects = arrayOf(
         Project.externalProject(
+          name = "Factorio: Space Age",
+          description = "An epic expansion to one of the best factory games out there.",
+          thumbnail = "project-factorio-thumbnail.jpg",
+          url = "https://factorio.com"),
+        Project.externalProject(
           name = "Popped to Scale",
           description = "A game made in a weekend for the GMTK Game Jam 2024. We just wanted to get our feet wet " +
             "with 3D after years of working in 3D. Posted to itch.io and to GitHub.",
