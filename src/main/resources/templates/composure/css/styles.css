@@ -385,10 +385,9 @@ nav.social .icon {
 	text-align: center;
 }
 
-.copyright p {
-  white-space: nowrap;
+.copyright {
+  max-width: 50%;
 }
-
 
 /* Simple nav rules */
 nav.simple {

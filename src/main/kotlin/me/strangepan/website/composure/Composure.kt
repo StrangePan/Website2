@@ -81,6 +81,9 @@ inline fun HTML.composure(title: String, crossinline content: FlowContent.() -> 
             a(href = "http://fontawesome.io/") { +"Font Awesome" }
             +" by Dave Gandy"
           }
+          p {
+            +"Bluesky, Discord, Factorio, Factorio: Space Age, GitHub, Mastodon, Steam, and YouTube are trademarks of their respective owners."
+          }
         }
 
         comment("Everybody loves social links. Right?")
